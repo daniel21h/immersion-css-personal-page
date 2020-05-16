@@ -7,9 +7,10 @@
 }
 
 body {
-  background-image: url(https://images.pexels.com/photos/3377405/pexels-photo-3377405.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background: #2a7ae4;
   background-size: 100vw 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
+
   height: 100vh;
   font-size: 12px;
 }
@@ -32,13 +33,11 @@ body {
 @media (min-width: 1200px) {
   body {
     font-size: 20px;
-    background: none;
-    background-color: #b4b4b4;
   }
 }
 
 header {
-  height: 100vh;
+  height: 60vh;
 
   display: flex;
   justify-content: center;
@@ -46,7 +45,10 @@ header {
 }
 
 .menu {
-  background-color: #fff;
+  background-color: #2a7ae4;
+  font-family: 'Comic Neue', cursive;
+  font-weight: 700;
+  font-size: 18px;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -69,7 +71,7 @@ header {
 
 a {
   text-decoration: none;
-  color: #008080;
+  color: #fff;
 }
 
 a:hover {
@@ -78,6 +80,8 @@ a:hover {
 
 .site-subtitle,
 .site-title {
+  font-family: 'Comic Neue', cursive;
+
   text-align: center;
   color: #fff;
 }
@@ -90,7 +94,64 @@ a:hover {
   font-style: italic;
 }
 
+.projects {
+  background: #fcfdff;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  padding: 2em;
+}
+
+.projects h2 {
+  font-family: 'Comic Neue', cursive;
+  font-size: 2em;
+  font-weight: 700;
+  color: #2a7ae4;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.projects .grid-projects {
+  display: grid;
+  gap: 2em;
+
+}
+
+@media (min-width: 560px) {
+  .projects .grid-projects {
+    grid-template-columns: repeat(2, 260px);
+    justify-content: center;
+
+  }
+}
+
+@media (min-width: 880px) {
+  .projects .grid-projects {
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+  }
+}
+
+.projects figure {
+  text-align: center;
+}
+
 .img-port {
-  width: 180px;
-  height: 180px;
+  width: 240px;
+  height: 180;
+  border-radius: 10px;  
+
+  object-fit: contain;
+}
+
+@media (min-width: 1200px) {
+  .img-port {
+    height: 240px;
+    width: 300px;
+  }
+
+  .projects .grid-projects {
+    display: grid;
+    gap: 150px;
+  }
 }
