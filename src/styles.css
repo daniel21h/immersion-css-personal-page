@@ -44,6 +44,25 @@ header {
   align-items: center;
 }
 
+.titles {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+
+  animation: linear 2s animationTitles forwards;
+}
+
+/* Function CSS to animations */
+@keyframes animationTitles { 
+  from {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
 .menu {
   background-color: #2a7ae4;
   font-family: 'Comic Neue', cursive;
@@ -67,6 +86,7 @@ header {
 .menu a {
   display: block;
   padding: 15px 20px;
+  transition: 0.2s;
 }
 
 a {
@@ -74,8 +94,9 @@ a {
   color: #fff;
 }
 
-a:hover {
-  text-decoration: underline;
+.menu a:active,
+.menu a:hover {
+  font-size: 20px;
 }
 
 .site-subtitle,
@@ -94,21 +115,27 @@ a:hover {
   font-style: italic;
 }
 
+.imersion {
+  color: #fff;
+}
+
 .projects {
   background: #fcfdff;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 
   padding: 2em;
+  padding-bottom: 100px;
 }
 
+.contact,
 .projects h2 {
   font-family: 'Comic Neue', cursive;
   font-size: 2em;
   font-weight: 700;
   color: #2a7ae4;
-  margin-bottom: 2em;
   text-align: center;
+  padding-bottom: 2em;
 }
 
 .projects .grid-projects {
@@ -139,19 +166,43 @@ a:hover {
 .img-port {
   width: 240px;
   height: 180;
-  border-radius: 10px;  
+  border-radius: 10px;
 
-  object-fit: contain;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.img-port:hover {
+  margin-bottom: 20px;
+  /* transform: scale(1.2); */
+  /* transform: scale(1.2) rotateX(45deg); */
+  transform: scale(1.2) rotate(-3deg);
 }
 
 @media (min-width: 1200px) {
-  .img-port {
+  /* .img-port {
     height: 240px;
     width: 300px;
-  }
+  } */
 
   .projects .grid-projects {
     display: grid;
     gap: 150px;
   }
+}
+
+.contact {
+  background-color: #f3f3f3;
+  padding: 2em;
+}
+
+.contact a {
+  color: #2a7ae4;
+  font-size: 50px;
+}
+
+.contact a:active,
+.contact a:hover {
+  text-shadow: 0px 0px 3px #2a7ae4;
+  transition: 0.3s;
 }

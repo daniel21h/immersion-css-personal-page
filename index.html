@@ -7,24 +7,29 @@
 
   <link rel="stylesheet" href="./src/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/c5fc62d146.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
   <header>
     <nav class="menu">
       <ul>
-        <li><a href="">Sobre</a></li>
-        <li><a href="">Portfólio</a></li>
-        <li><a href="">Contato</a></li>
+        <li><a href="#"><i class="fas fa-house-user"></i></a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projects">Portfólio</a></li>
+        <li><a href="#contact">Contato</a></li>
       </ul>
     </nav>
 
-    <hgroup>
+    <hgroup class="titles">
+      <p class="imersion">#imersionCSS</p>
       <h1 class="site-title">Daniel Hessel</h1>
       <h2 class="site-subtitle">Full Stack Developer</h2>
     </hgroup>
   </header>
 
-  <section class="projects">
+  <section id="projects" class="projects">
     <h2>Projetos</h2>
 
     <div class="grid-projects">
@@ -59,5 +64,24 @@
       </figure>
     </div>
   </section>
+
+  <section id="contact" class="contact">
+    <h2>Contato</h2>
+
+    <div class="grid-icons">
+      <a href="https://github.com/daniel21h">
+        <i class="fab fa-github"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/daniel-hessel-240731176/">
+        <i class="fab fa-linkedin"></i>
+      </a>
+
+      <a href="mailto:hesseldaniel21@gmail.com?subject=Questions">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </section>
+
 </body>
 </html>
